@@ -1,9 +1,13 @@
 {% extends "myblog_base.html" %}
 
 {% block content %}
-  <a class="header" href="{% url 'blog_create' %}"><h1>Create New Blog Post</h1></a>
+  <div class="header">
+    <h1>Blog Post Listing</h1>
+  </div>
 
-  <h1>Recent Posts</h1>
+  <a href="{% url 'blog_create' %}"><h4>Create New Blog Post</h4></a>
+
+  <h2>Recent Posts</h2>
 
   {% comment %} here is where the query happens {% endcomment %}
   {% for post in posts %}
